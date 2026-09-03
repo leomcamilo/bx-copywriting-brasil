@@ -67,6 +67,7 @@ Cada canal tem limite físico, convenção e um CTA que funciona. Escrever igual
 - **Estrutura**: títulos curtos (~30 caracteres), títulos longos (~90), descrições (curta ~60 e longas ~90), nome da empresa, além dos ativos visuais.
 - **Requisito de variedade**: o formato exige um conjunto diverso de ativos porque o sistema monta a peça para superfícies muito diferentes (busca, YouTube, Gmail, Display). Ativos redundantes reduzem o alcance do que o sistema consegue montar.
 - **Regra**: cada título longo precisa se sustentar sozinho como frase completa — ele pode aparecer sem nenhum outro texto ao lado.
+- **Exemplos de CTA**: "Comece agora", "Peça uma demonstração", "Assine hoje", "Simule seu plano".
 - **Proibido**: reaproveitar o mesmo texto entre título curto e longo; escrever para uma superfície só.
 
 ## Landing page — above the fold
@@ -74,6 +75,7 @@ Cada canal tem limite físico, convenção e um CTA que funciona. Escrever igual
 - **Estrutura da primeira dobra**: headline (a promessa) + subheadline (o mecanismo ou a qualificação) + prova imediata (número, selo, logo de cliente) + CTA primário + elemento de confiança (garantia, segurança, política de troca).
 - **Regra do message match**: quem chega de um anúncio precisa ver **a mesma promessa do anúncio** na primeira dobra, de preferência com as mesmas palavras. Se o anúncio prometeu "fechamento em 4 horas" e a página abre com "gestão financeira completa", a rejeição dispara — o visitante acha que clicou errado.
 - **Um CTA primário.** Botões secundários competem com o principal e derrubam conversão.
+- **Exemplos de CTA**: "Começar o teste grátis", "Quero minha simulação", "Agendar demonstração", "Criar minha conta". Prefira a primeira pessoa quando a ação é do usuário e o compromisso é baixo.
 - **Proibido**: carrossel na primeira dobra; headline institucional em página de conversão; pedir dados antes de entregar qualquer valor.
 
 ## Roteiro de vídeo curto (Reels / Shorts / TikTok)
@@ -90,6 +92,7 @@ Cada canal tem limite físico, convenção e um CTA que funciona. Escrever igual
 - **Post orgânico**: primeira linha antes do "ver mais" (~200 caracteres) carrega o gancho. Parágrafos de uma linha.
 - **Anúncio**: texto introdutório curto (~150 caracteres antes do corte) + título (~70 no formato de imagem única).
 - **InMail / mensagem**: personalização real ou não envie. Assunto curto, primeira linha sobre o destinatário, um pedido pequeno e específico — nunca "vamos marcar 30 minutos" na primeira mensagem.
+- **Exemplos de CTA**: "Baixar o relatório", "Ver o estudo de caso", "Falar com um especialista", "Posso te mandar o número?" (em InMail, o CTA é uma pergunta respondível, não um agendamento).
 - **Proibido**: humildade encenada ("fiquei emocionado ao compartilhar"); post que só faz sentido para quem já é cliente; CTA de compra em primeiro contato B2B de ticket alto.
 
 ## Notificação in-app e banner de app
@@ -97,6 +100,7 @@ Cada canal tem limite físico, convenção e um CTA que funciona. Escrever igual
 - **Diferente de push**: o usuário já está no aplicativo, com contexto ativo e intenção. O atrito é menor e a tolerância a texto é maior — mas a interrupção é mais cara, porque corta uma ação em andamento.
 - **Estrutura**: título curto + uma frase de valor + ação primária, com dispensa fácil e visível.
 - **Regra**: dispare por comportamento, não por calendário. In-app disparada fora de contexto é a forma mais rápida de treinar o usuário a fechar sem ler.
+- **Exemplos de CTA**: "Ativar agora", "Continuar de onde parei", "Ver meu resumo", "Agora não" (a dispensa também é copy, e uma dispensa clara preserva a próxima interrupção).
 - **Proibido**: bloquear a tela sem saída óbvia; usar in-app para o que caberia num push; repetir a mesma notificação na mesma sessão.
 
 ## Assunto de e-mail: transacional vs. promocional
