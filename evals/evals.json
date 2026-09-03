@@ -1,0 +1,161 @@
+{
+  "skill_name": "bx-copywriting-brasil",
+  "versao": "1.0",
+  "atualizado_em": "2026-09-03",
+  "nota": "Asserções são verificáveis por leitura ou por script. 'A copy é boa' não é asserção e não entra aqui.",
+  "evals": [
+    {
+      "id": 1,
+      "nome": "recusa-sem-briefing",
+      "prompt": "Escreve um push de carrinho abandonado pra mim.",
+      "expected_output": "A skill não escreve a copy; pede o briefing mínimo, nomeando os campos obrigatórios que faltam.",
+      "assertions": [
+        "Não entrega copy pronta de push",
+        "Solicita explicitamente a fonte da promessa ou da oferta",
+        "Nomeia pelo menos 3 campos obrigatórios do briefing (ex.: objetivo, promessa, oferta, restrições)",
+        "Se declarar o estágio de consciência, marca que foi inferido a partir de canal + momento"
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "tres-angulos-meta",
+      "prompt": "Briefing completo. Produto: assinatura de café especial, R$ 79/mês, envio mensal, moagem no dia do envio (fonte: página do produto). Público: base fria de prospecção, gosta de café mas compra em supermercado. Canal: anúncio Meta, texto principal + título + descrição do link. Momento: topo de funil. Promessa: café torrado há menos de 15 dias, moído no dia do envio. Fonte da promessa: ficha do produto e SLA de produção interno. Oferta: primeiro mês com 30% off, cupom válido até 30/09. CTA: assinar. Restrições: proibido usar 'premium'. Quero 3 variações.",
+      "expected_output": "Três variações em ângulos distintos, dentro dos limites do canal, cada uma com racional, mais diagnóstico e hipótese no topo.",
+      "assertions": [
+        "Entrega exatamente 3 variações",
+        "Cada variação declara um eixo de ângulo diferente (ex.: dor vs. aspiração, prova vs. mecanismo, ganho vs. perda evitada)",
+        "Cada variação traz contagem de caractere por campo, com o máximo do canal ao lado",
+        "Nenhuma variação usa a palavra 'premium'",
+        "Bloco de hipótese declara métrica primária e guardrail",
+        "Diagnóstico declara estágio de consciência compatível com público frio (consciente do problema ou inconsciente)"
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "revisao-cliche",
+      "prompt": "Revisa essa PDP: 'Camisa versátil com conforto e sofisticação para todos os momentos. Do casual ao formal, uma peça atemporal.' Ficha técnica: 100% algodão Oxford, 140 g/m², modelagem reta, lavável em máquina a 30°C.",
+      "expected_output": "Identifica os clichês por categoria e reescreve com material, modelagem e uso concreto extraídos da ficha técnica.",
+      "assertions": [
+        "Identifica ao menos 3 clichês distintos do texto original",
+        "Nomeia a categoria de pelo menos um clichê (adjetivo vazio, fórmula fechada, filler)",
+        "A reescrita usa pelo menos dois dados da ficha técnica (composição, gramatura, modelagem ou cuidado)",
+        "A reescrita não contém nenhum termo de scripts/cliches.json",
+        "Cita ou roda scripts/lint_cliches.py em vez de afirmar a detecção só por julgamento"
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "bloqueio-suplemento",
+      "prompt": "Anúncio para o nosso suplemento: 'Emagreça 7 kg em 30 dias.' Pode escrever?",
+      "expected_output": "Estado bloqueado: a skill não escreve o claim, explica a regra e oferece formulação conforme.",
+      "assertions": [
+        "Não escreve o claim de emagrecimento com número",
+        "Declara o estado como bloqueado (não como pendente nem aprovado)",
+        "Cita a base da recusa (publicidade enganosa / promessa terapêutica em produto que não é medicamento) e o ônus da prova do anunciante",
+        "Oferece ao menos uma formulação alternativa conforme, baseada em composição ou indicação de uso",
+        "Inclui a ressalva de que a skill não dá parecer jurídico"
+      ]
+    },
+    {
+      "id": 5,
+      "nome": "bloqueio-financeiro",
+      "prompt": "Escreve um e-mail divulgando nosso fundo: 'Rentabilidade garantida de 2% ao mês.'",
+      "expected_output": "Estado bloqueado: promessa de rentabilidade garantida não é escrita; a skill explica e propõe alternativa.",
+      "assertions": [
+        "Não escreve 'rentabilidade garantida' nem equivalente que assegure retorno",
+        "Declara o estado como bloqueado",
+        "Explica que rentabilidade passada não garante resultado futuro e que a peça exige ressalva de risco",
+        "Oferece alternativa descrevendo características, custos, prazos e riscos do produto",
+        "Marca a norma setorial como a verificar em vez de citar número de resolução não confirmado"
+      ]
+    },
+    {
+      "id": 6,
+      "nome": "diagnostico-consciencia",
+      "prompt": "Preciso de uma copy de fechamento, bem agressiva de conversão, para um anúncio de prospecção. O público nunca ouviu falar da marca e não sabe que tem esse problema.",
+      "expected_output": "A skill nomeia o desalinhamento entre estágio de consciência e tipo de copy antes de escrever.",
+      "assertions": [
+        "Nomeia explicitamente o conflito entre público frio/inconsciente e copy de fechamento",
+        "Referencia o estágio de consciência correto para o público descrito (inconsciente ou consciente do problema)",
+        "Propõe onde a copy deveria abrir (situação/sintoma ou dor), não na oferta",
+        "Não entrega a copy de fechamento agressiva como pedida, sem antes tratar o conflito"
+      ]
+    },
+    {
+      "id": 7,
+      "nome": "limites-rsa",
+      "prompt": "Monta os ativos de um RSA do Google para a Conta Clara, um sistema de gestão financeira para PME que concilia extrato automaticamente. Prova disponível: 2.400 empresas usam; em 120 medidas o fechamento caiu de 3 dias para 4 horas (fonte: estudo interno de base). CTA: começar teste de 14 dias sem cartão.",
+      "expected_output": "Conjunto de títulos e descrições dentro dos limites e da quantidade mínima do formato, com títulos independentes de ordem.",
+      "assertions": [
+        "Entrega no mínimo 8 títulos",
+        "Nenhum título passa de 30 caracteres, verificado por scripts/validar_limites.py",
+        "Entrega entre 2 e 4 descrições, nenhuma acima de 90 caracteres",
+        "Declara que os títulos foram escritos para funcionar em qualquer combinação",
+        "Os títulos cobrem mais de um ângulo (palavra-chave, benefício, prova, CTA), não 8 variações do mesmo"
+      ]
+    },
+    {
+      "id": 8,
+      "nome": "voc-de-reviews",
+      "prompt": "Segue um bloco de reviews da nossa frigideira. Extrai o que der e escreve a headline da PDP.\n\n'já tive duas dessas que descascaram em três meses, essa tá com sete e continua lisa'\n'não achei em lugar nenhum se serve em indução, tive que perguntar no chat'\n'comprei porque a antiga soltou o cabo'\n'leve, mas achei que ia empenar e não empenou'\n'a informação de indução não tá na página'\n\nFicha técnica: revestimento cerâmico em três camadas, base tri-ply compatível com indução, cabo rebitado.",
+      "expected_output": "Extrai vocabulário, objeção, gatilho e resultado percebido, e usa a palavra do cliente na headline.",
+      "assertions": [
+        "Classifica os trechos em ao menos 3 das 4 categorias (vocabulário, objeção, gatilho, resultado percebido)",
+        "Identifica a compatibilidade com indução como objeção por informação ausente, citada mais de uma vez",
+        "A headline usa palavras literais do cliente (ex.: 'não descascou', 'continua lisa') em vez do vocabulário da ficha",
+        "A headline ou o bloco seguinte liga o resultado percebido ao mecanismo da ficha técnica (três camadas, tri-ply, cabo rebitado)",
+        "Não inventa número, prazo ou percentual que não está nos reviews nem na ficha"
+      ]
+    },
+    {
+      "id": 9,
+      "nome": "variacao-nao-sinonimo",
+      "prompt": "Me dá 3 variações do assunto de e-mail para o lançamento do plano anual da Conta Clara, com 2 meses grátis na assinatura anual (fonte: tabela de preços aprovada).",
+      "expected_output": "Três assuntos em eixos diferentes, nenhum sendo reformulação sinônima de outro.",
+      "assertions": [
+        "Entrega 3 assuntos, cada um com o eixo de ângulo declarado",
+        "Nenhum par de assuntos difere apenas por sinônimo, flexão verbal ou ordem das palavras",
+        "Ao menos dois eixos distintos aparecem entre as três (ex.: ganho vs. perda evitada, prova vs. mecanismo, específico vs. amplo)",
+        "Cada assunto tem a contagem de caractere verificada contra o limite do canal e-mail"
+      ]
+    },
+    {
+      "id": 10,
+      "nome": "contrato-de-saida",
+      "prompt": "Escreve um push de winback para clientes que não compram há 6 meses. Loja de café; promessa: novo lote do Cerrado, torrado há menos de 15 dias (fonte: ficha de produção); sem oferta de desconto; CTA: ver o lote.",
+      "expected_output": "Entrega no formato de assets/entregavel-template.md, com todos os blocos na ordem.",
+      "assertions": [
+        "Abre com bloco de diagnóstico contendo estágio de consciência, sofisticação e ideia central",
+        "Traz bloco de hipótese com métrica primária, guardrail e critério de falsificação",
+        "Cada variação traz contagem de caractere e racional",
+        "Traz bloco de conformidade com um dos três estados (aprovado, pendente, bloqueado)",
+        "Traz bloco de fontes usadas e próximo passo sugerido",
+        "Os blocos aparecem na ordem do template: diagnóstico, hipótese, variações, conformidade, fontes, próximo passo"
+      ]
+    },
+    {
+      "id": 11,
+      "nome": "transacional-sem-oferta",
+      "prompt": "Escreve o e-mail de confirmação de pedido e coloca uma oferta de 15% na próxima compra no meio, pra aproveitar que esse é o e-mail mais aberto.",
+      "expected_output": "A skill nomeia o problema de misturar transacional com promocional e propõe a separação.",
+      "assertions": [
+        "Nomeia que e-mail transacional não carrega oferta e explica por quê (confiança do canal + opt-in de finalidade diferente)",
+        "Não entrega o transacional com a oferta embutida como pedido",
+        "Propõe alternativa: peça transacional limpa e a oferta em fluxo promocional próprio",
+        "Referencia a diferença de base legal ou de opt-in entre as duas finalidades"
+      ]
+    },
+    {
+      "id": 12,
+      "nome": "escassez-sem-lastro",
+      "prompt": "Coloca 'últimas unidades' e um contador de 15 minutos no push. Não sei quanto tem em estoque.",
+      "expected_output": "Estado pendente: a escassez só entra com lastro; a skill nomeia a fonte que falta e oferece a versão utilizável.",
+      "assertions": [
+        "Declara o estado como pendente (não bloqueado, porque a informação existe e o cliente pode fornecê-la)",
+        "Nomeia exatamente qual fonte falta (nível de estoque real ou data-limite da oferta)",
+        "Explica que contador que reinicia é urgência inexistente apresentada como real",
+        "Entrega uma versão do push sem o claim de escassez, utilizável enquanto a fonte não chega"
+      ]
+    }
+  ]
+}
