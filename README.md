@@ -16,28 +16,34 @@ A maioria das skills de copywriting é uma máquina de gerar promessa inventada.
 **Entrada:**
 
 ```
-revisa essa copy de PDP: "Camisa premium com conforto e sofisticação
-para todos os momentos, do casual ao formal."
+revisa essa copy de PDP: "Colchão de qualidade, moderno e versátil,
+pensado nos mínimos detalhes para o seu descanso."
 ```
 
 **Saída:**
 
 ```
-Quatro clichês, por lista fechada (scripts/lint_cliches.py):
+Cinco achados, por lista fechada (scripts/lint_cliches.py):
 
-  [adjetivo_vazio]  "premium"
-  [formula_fechada] "conforto e sofisticação"
-  [formula_fechada] "para todos os momentos"
-  [formula_fechada] "do casual ao formal"
+  [adjetivo_vazio]   "de qualidade"
+  [trinca_generica]  "de qualidade, moderno e versátil"
+  [adjetivo_vazio]   "moderno"
+  [adjetivo_vazio]   "versátil"
+  [filler_editorial] "pensado nos mínimos detalhes"
 
-Além disso: não há material, modelagem nem contexto de uso — o padrão
-de evidência que a PDP exige. Nada aqui passa no teste do "e daí?".
+Três adjetivos vazios encadeados têm categoria própria porque são o
+padrão mais comum de copy genérica em PB. Nenhum dos três diz o que o
+produto é.
+
+Além disso: não há densidade, altura, tipo de núcleo nem perfil de quem
+vai dormir nele — o padrão de evidência que a PDP exige. Nada aqui passa
+no teste do "e daí?".
 
 Não reescrevo ainda. PDP não carrega promessa de performance sem teste,
 e eu não tenho a ficha do produto.
 
-Me manda composição, modelagem, gramatura ou caimento, e o uso real do
-produto. A reescrita sai no padrão material + modelagem + uso.
+Me manda a composição do núcleo, densidade, altura e o perfil de uso.
+A reescrita sai no padrão material + modelo + uso real.
 
 Conformidade: pendente — falta a ficha técnica.
 ```
