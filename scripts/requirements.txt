@@ -1,0 +1,11 @@
+# Sem dependências externas.
+#
+# validar_limites.py e lint_cliches.py usam apenas a biblioteca padrão do
+# Python 3 (argparse, json, os, re, sys, unicodedata). Isso é deliberado: a
+# skill roda dentro de agentes em ambientes que não controlamos, e uma
+# dependência a mais é um motivo a mais para a validação não rodar — e
+# validação que não roda vira contagem estimada pelo modelo, que é o
+# problema que estes scripts existem para eliminar.
+#
+# Se algum script vier a precisar de dependência, ela entra aqui com a
+# versão fixada (pacote==versão), e o README passa a documentar a instalação.

@@ -1,0 +1,90 @@
+{
+  "_meta": {
+    "atualizado_em": "2026-09-03",
+    "aviso": "Limites de plataforma mudam sem aviso. Revalidar na documentação oficial antes de campanha. Onde não houve confirmação na fonte oficial, foi usado valor conservador (mais restritivo que o provável limite real) — errar para menos trunca menos.",
+    "unidade": "caracteres Unicode (len sobre str), salvo campos com max_palavras",
+    "fonte_de_verdade": "Este arquivo é a única fonte de limites do repositório. references/canais-e-formatos.md cita números apenas como orientação de escrita."
+  },
+
+  "push": {
+    "_nota": "Ponto de truncamento varia entre iOS/Android, lockscreen/central e tamanho de fonte do usuário. Faixa conservadora.",
+    "titulo": { "max": 50, "recomendado": 40 },
+    "corpo": { "max": 120, "recomendado": 100 }
+  },
+
+  "email": {
+    "assunto": { "max": 60, "recomendado": 45, "nota": "corte no mobile" },
+    "preheader": { "max": 90, "recomendado": 80, "nota": "não repetir o assunto" },
+    "titulo_botao": { "max": 25, "recomendado": 20 }
+  },
+
+  "sms": {
+    "mensagem": { "max": 160, "nota": "acima de 160 o envio é segmentado e cobrado como múltiplo" }
+  },
+
+  "whatsapp": {
+    "_nota": "Template de mensagem tem limites próprios da API; valores conservadores de legibilidade.",
+    "corpo": { "max": 1024, "recomendado": 300 },
+    "botao": { "max": 20 }
+  },
+
+  "meta_ads": {
+    "_nota": "Valores que a plataforma altera. Recomendados evitam truncamento em feed mobile.",
+    "texto_principal": { "max": 125, "recomendado": 110, "nota": "corte do 'ver mais'" },
+    "titulo": { "max": 40, "recomendado": 25 },
+    "descricao_link": { "max": 30 }
+  },
+
+  "google_rsa": {
+    "titulo": { "max": 30, "quantidade_min": 8, "quantidade_max": 15, "repetivel": true },
+    "descricao": { "max": 90, "quantidade_min": 2, "quantidade_max": 4, "repetivel": true },
+    "caminho_exibicao": { "max": 15, "quantidade_min": 0, "quantidade_max": 2, "repetivel": true }
+  },
+
+  "google_pmax": {
+    "titulo_curto": { "max": 30, "quantidade_min": 3, "quantidade_max": 15, "repetivel": true },
+    "titulo_longo": { "max": 90, "quantidade_min": 1, "quantidade_max": 5, "repetivel": true },
+    "descricao_curta": { "max": 60, "quantidade_min": 1, "quantidade_max": 1, "repetivel": true },
+    "descricao": { "max": 90, "quantidade_min": 1, "quantidade_max": 4, "repetivel": true },
+    "nome_empresa": { "max": 25 }
+  },
+
+  "linkedin": {
+    "post_gancho": { "max": 200, "nota": "primeira linha antes do 'ver mais'" },
+    "anuncio_texto": { "max": 150, "recomendado": 120 },
+    "anuncio_titulo": { "max": 70, "recomendado": 50 },
+    "inmail_assunto": { "max": 60, "recomendado": 40 }
+  },
+
+  "banner": {
+    "titulo": { "max_palavras": 8 },
+    "subtitulo": { "max": 60 },
+    "cta": { "max": 20 }
+  },
+
+  "landing_page": {
+    "headline": { "max": 70, "recomendado": 55 },
+    "subheadline": { "max": 140, "recomendado": 110 },
+    "cta_primario": { "max": 25 }
+  },
+
+  "pdp": {
+    "titulo": { "max": 70, "recomendado": 60 },
+    "frase_uso": { "max": 140 },
+    "bullet": { "max": 90, "quantidade_min": 3, "quantidade_max": 7, "repetivel": true },
+    "cta": { "max": 25 }
+  },
+
+  "in_app": {
+    "titulo": { "max": 40, "recomendado": 30 },
+    "corpo": { "max": 140, "recomendado": 110 },
+    "cta": { "max": 20 }
+  },
+
+  "video_curto": {
+    "_nota": "Gancho medido em caracteres do texto falado; ~2s de fala equivale a cerca de 45 caracteres em PB.",
+    "gancho": { "max": 60, "recomendado": 45 },
+    "legenda_primeira_linha": { "max": 80 },
+    "cta_em_tela": { "max": 25 }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "_meta": {
+    "atualizado_em": "2026-09-03",
+    "descricao": "Lista fechada de clichês em PB. Fonte única do repositório — references/checklist-editorial.md ensina o princípio e aponta para cá, sem repetir a lista.",
+    "criterio": "Entra aqui o termo que não especifica nada: se trocá-lo por outro do mesmo campo semântico não muda o que o leitor entende, ele é enchimento.",
+    "sugestoes": {
+      "adjetivo_vazio": "substitua por função concreta: material + modelagem + uso, ou característica + número",
+      "formula_fechada": "corte a fórmula inteira e descreva a situação de uso real",
+      "filler_editorial": "corte: a frase costuma funcionar melhor sem ela",
+      "urgencia_vazia": "declare a escassez real (data, estoque, lote) ou remova a urgência",
+      "prova_vazia": "traga o número verificável e a fonte, ou remova a alegação de prova",
+      "superlativo_sem_prova": "superlativo comparativo exige comprovação (CDC art. 38); troque por atributo mensurável",
+      "cta_fraco": "use o verbo da ação real em vez do genérico",
+      "trinca_generica": "três adjetivos vagos em sequência não somam: escolha um atributo concreto e prove"
+    }
+  },
+
+  "adjetivo_vazio": [
+    "premium", "sofisticado", "sofisticada", "atemporal", "versátil", "versáteis",
+    "exclusivo", "exclusiva", "inovador", "inovadora", "diferenciado", "diferenciada",
+    "incrível", "surpreendente", "impecável", "elegante", "requintado", "nobre",
+    "moderno", "arrojado", "único", "especial", "de qualidade", "de alto padrão"
+  ],
+
+  "formula_fechada": [
+    "conforto e sofisticação", "do casual ao formal", "para todos os momentos",
+    "para todas as ocasiões", "estilo e conforto", "qualidade e elegância",
+    "beleza e funcionalidade", "seu novo queridinho", "must have", "peça-chave",
+    "combina com tudo", "eleve seu estilo", "transforme sua rotina",
+    "a experiência que você merece", "feito para você"
+  ],
+
+  "filler_editorial": [
+    "presença discreta", "escolhas precisas", "toque especial", "toque de sofisticação",
+    "não é à toa", "afinal", "vale lembrar", "sem falar", "por que não",
+    "muito mais que", "nada mais é do que", "pensado nos mínimos detalhes",
+    "cuidado em cada detalhe"
+  ],
+
+  "urgencia_vazia": [
+    "oferta imperdível", "imperdível", "não perca", "não fique de fora",
+    "última chance", "corre que acaba", "por tempo limitado", "aproveite já",
+    "é agora ou nunca", "vagas limitadas"
+  ],
+
+  "prova_vazia": [
+    "todo mundo ama", "todo mundo está usando", "sucesso absoluto",
+    "especialistas indicam", "especialistas recomendam", "aprovado por quem entende",
+    "o preferido dos clientes", "queridinho do público", "clientes satisfeitos",
+    "resultados comprovados"
+  ],
+
+  "superlativo_sem_prova": [
+    "o melhor do brasil", "o melhor do mercado", "o número 1", "líder de mercado",
+    "o mais vendido", "o mais completo", "sem igual", "insuperável", "imbatível"
+  ],
+
+  "cta_fraco": [
+    "saiba mais", "clique aqui", "confira", "veja mais", "acesse", "descubra"
+  ]
+}

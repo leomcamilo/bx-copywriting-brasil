@@ -12,15 +12,17 @@ Se `não` em qualquer um: **re-escreva a promessa** ou peça a fonte que falta.
 
 ## 2. Tom de voz definido
 
-Escolha um registro antes de escrever. Misturar registros é o erro mais rápido de detectar.
+A voz da marca é decidida uma vez por cliente, em [`assets/brand-voice-intake.md`](../assets/brand-voice-intake.md) — atributos, pares "como dizer / como não dizer", palavras banidas, tratamento e uso de emoji. **Se o cliente tem esse documento preenchido, ele manda; esta seção não se aplica.**
 
-| Tom | Quando usar | Exemplo de CTA |
+Quando o cliente ainda não tem voz definida, escolha um destes três arquétipos como ponto de partida provisório e declare a escolha na entrega:
+
+| Arquétipo | Quando usar | Exemplo de CTA |
 |-----|-------------|----------------|
-| **Direto/editorial** | Moda, premium, B2B, decisão considerada | "Ver detalhes", "Conhecer a coleção" |
+| **Direto/editorial** | Moda, alto ticket, B2B, decisão considerada | "Ver detalhes", "Conhecer a coleção" |
 | **Amigável/informal** | Comunidade, reengajamento, redes sociais | "Aproveitar agora", "Quero esse" |
 | **Técnico/preciso** | Software, serviço, spec comparável | "Testar grátis", "Comparar planos" |
 
-Regra prática: se a marca fala "você" na página de produto, a copy não fala "tu" no e-mail.
+Regra prática, válida em qualquer arquétipo: se a marca fala "você" na página de produto, a copy não fala "tu" no e-mail.
 
 ## 3. Gatilhos mentais — uso legítimo
 
@@ -36,15 +38,20 @@ Os gatilhos abaixo são documentados como funcionais (Cialdini, adaptados no cor
 
 ## 4. Clichês que derrubam copy em PB
 
-O corpus mostra que o mercado usa essas expressões como enchimento — e elas não funcionam mais:
+**O princípio:** o clichê é o termo que não especifica nada. Se trocá-lo por outro do mesmo campo semântico não muda o que o leitor entende, ele é enchimento — e enchimento ocupa o espaço que a informação deveria ocupar.
 
-- "Conforto e sofisticação" como fórmula fechada
-- "Premium", "sofisticado", "atemporal", "versátil" sem função concreta
-- "Do casual ao formal" como descrição de guarda-roupa
-- "Presença discreta", "escolhas precisas" (filler editorial sem informação)
-- Trincas genéricas: três atributos vagos em sequência ("estilo, qualidade e elegância")
+Substitua por **material + modelo + uso real**:
 
-Substitua por **material + modelo + uso real**: "Oxford de algodão com elastano, estrutura para manter o caimento ao longo do dia" funciona; "camisa versátil para todos os momentos" não.
+- Funciona: "Oxford de algodão com elastano, estrutura para manter o caimento ao longo do dia."
+- Não funciona: "Camisa versátil para todos os momentos."
+
+**A lista fechada de clichês não vive aqui.** Ela vive em [`scripts/cliches.json`](../scripts/cliches.json) e é aplicada por [`scripts/lint_cliches.py`](../scripts/lint_cliches.py), que também detecta a trinca genérica (três adjetivos vazios encadeados, como "moderno, elegante e sofisticado"). Rode o script — julgamento humano ou de modelo é inconsistente entre execuções; lista fechada não é.
+
+```bash
+python3 scripts/lint_cliches.py --arquivo copy.txt --formato texto
+```
+
+Quando a marca usa legitimamente um termo da lista (uma marca de cosmético pode ter direito a "sofisticado" se isso está no `brand-voice-intake.md`), use `--ignorar categoria` e registre a exceção na entrega.
 
 ## 5. Estrutura de frase e ritmo
 
@@ -62,11 +69,34 @@ Se travar, corte a subordinada ou divida em duas frases.
 
 ## 7. Conformidade de canal
 
-- [ ] Push: título e corpo cabem nos caracteres antes de cortar?
-- [ ] E-mail: assunto + preheader não se repetem?
-- [ ] Meta: o botão de CTA é o mais forte disponível para a ação real?
-- [ ] PDP: o CTA da página ("Adicionar à sacola") está presente e a copy reforça a decisão?
+**Contagem de caractere não é item de checklist humano.** Rode [`scripts/validar_limites.py`](../scripts/validar_limites.py) com os limites de [`scripts/limites_canais.json`](../scripts/limites_canais.json) e cole o resultado na entrega:
 
-## 8. Última verificação: o "e daí?" test
+```bash
+echo '{"canal":"push","campos":{"titulo":"...","corpo":"..."}}' \
+  | python3 scripts/validar_limites.py --formato texto
+```
+
+O que continua sendo julgamento, e por isso fica aqui:
+
+- [ ] E-mail: o preheader complementa o assunto em vez de repeti-lo?
+- [ ] Meta: o botão de CTA é o mais forte disponível para a ação real?
+- [ ] PDP: o CTA da página está presente e a copy reforça a decisão?
+- [ ] RSA: os títulos fazem sentido em qualquer combinação, sem depender de ordem?
+- [ ] Landing page: a primeira dobra repete a promessa do anúncio que trouxe o visitante?
+
+## 8. Detecção de copy genérica de IA
+
+A skill roda dentro de um agente, e o leitor de 2026 reconhece o padrão. Estes são os sinais, e cada um tem correção mecânica:
+
+- [ ] **Estrutura repetida entre variações.** Se A e B têm o mesmo número de frases, o mesmo ritmo e o mesmo ponto de virada, elas são a mesma copy. Reescreva B a partir de outro eixo de ângulo (ver `frameworks.md`, seção E).
+- [ ] **Adjetivo empilhado.** Dois ou três qualificadores antes do substantivo ("uma solução completa, moderna e intuitiva"). Corte para zero e deixe o substantivo trabalhar.
+- [ ] **Transição formulaica.** "Além disso", "Não só isso", "Em um mundo cada vez mais", "Seja você um X ou um Y". Corte a transição inteira; o parágrafo quase sempre começa melhor na frase seguinte.
+- [ ] **Simetria excessiva.** Três bullets do mesmo comprimento, todos começando com verbo no infinitivo. Texto humano é irregular.
+- [ ] **Ausência de detalhe específico do produto.** Se a copy funcionaria trocando o nome do produto pelo de um concorrente, ela não é sobre o produto. Volte ao briefing e traga um número, um material, um prazo ou um nome próprio.
+- [ ] **Fecho auto-referente.** "Em resumo", "No fim das contas", "A escolha é sua". Copy termina em CTA, não em conclusão de redação.
+
+O teste rápido: leia só a primeira frase de cada variação. Se elas poderiam ser embaralhadas sem prejuízo, o problema não é de palavra — é de ângulo.
+
+## 9. Última verificação: o "e daí?" test
 
 Leia a copy como quem recebe. Se você responder "e daí?" ou "e o que eu faço agora?", a copy ainda não está pronta. O passo seguinte precisa ser óbvio, específico e possível.
