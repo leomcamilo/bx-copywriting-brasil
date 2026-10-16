@@ -120,3 +120,13 @@ Aplicável a: recuperação de checkout, reposição, lembrete de teste expirand
 ```
 
 Repare que a conclusão fala do **público**, não da frase. Aprendizado sobre a frase morre com a campanha; aprendizado sobre o público sobrevive a ela.
+
+### Consultar antes de perguntar
+
+O registro só vira ativo se for lido. Antes de pedir resultado de peças anteriores ou de propor um ângulo, procure no registro do cliente:
+
+1. **Aprendizado do mesmo fluxo ou canal.** Se existe, use a conclusão como premissa do diagnóstico e não pergunte de novo como a última peça performou.
+2. **Aprendizado de fluxo que herda** (o campo "Aplicável a"). Ele vale como hipótese de partida, declarada como herdada.
+3. **Ângulo que já falhou.** Não repita sem motivo novo; se repetir, diga por que agora seria diferente.
+
+Na entrega, cite o que usou: "Partindo do aprendizado de 2026-09-03 (carrinho abandonado: interrupção, não dúvida), testo remoção de atrito contra objeção de frete." Se o registro não existe ou não cobre o caso, aí sim pergunte pelas peças anteriores, como no briefing.

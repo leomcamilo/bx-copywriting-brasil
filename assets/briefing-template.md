@@ -51,7 +51,9 @@ Limite de caracteres específico do cliente (se diferente do padrão do canal), 
 
 ## Se faltar
 
-Para cada campo obrigatório ausente: o que fazer, e se é inferível.
+Antes de perguntar, procure o campo no que já existe: conversa atual, briefings e peças anteriores do cliente, `brand-voice-intake` preenchido e registro de aprendizados (`references/hipotese-e-metrica.md`, seção 7). Campo encontrado ali conta como preenchido; diga de onde veio.
+
+Para cada campo obrigatório que continua ausente: o que fazer, e se é inferível.
 
 | Campo ausente | Inferível? | O que fazer |
 |---|---|---|

@@ -1,7 +1,7 @@
 {
   "skill_name": "bx-copywriting-brasil",
-  "versao": "1.0",
-  "atualizado_em": "2026-09-03",
+  "versao": "1.1",
+  "atualizado_em": "2026-10-16",
   "nota": "Asserções são verificáveis por leitura ou por script. 'A copy é boa' não é asserção e não entra aqui.",
   "evals": [
     {
@@ -155,6 +155,58 @@
         "Nomeia exatamente qual fonte falta (nível de estoque real ou data-limite da oferta)",
         "Explica que contador que reinicia é urgência inexistente apresentada como real",
         "Entrega uma versão do push sem o claim de escassez, utilizável enquanto a fonte não chega"
+      ]
+    },
+    {
+      "id": 13,
+      "nome": "edicao-pontual-uma-frase",
+      "prompt": "Troca só a segunda frase do corpo, que tá genérica. O resto já foi aprovado.\n\nAssunto: O lote novo do Cerrado chegou\nPré-header: Torrado há menos de 15 dias, do jeito que você gosta\nCorpo: O lote novo do Cerrado já está na loja. Um sabor incrível em cada xícara. Torra média, com notas de chocolate e castanha.\nCTA: Ver o lote\n\nFonte: ficha de produção do lote (torra média, notas de chocolate e castanha, torrado há menos de 15 dias).",
+      "expected_output": "Só a segunda frase do corpo muda, com motivo declarado; todo o resto volta idêntico, sem variações nem relatório.",
+      "assertions": [
+        "Assunto, pré-header, a primeira e a terceira frases do corpo e o CTA voltam idênticos ao original",
+        "A frase nova não contém termo de scripts/cliches.json (conferido por scripts/lint_cliches.py)",
+        "Declara o motivo da alteração, nomeando o clichê 'incrível' (adjetivo vazio)",
+        "Não entrega variações, bloco de diagnóstico nem bloco de hipótese",
+        "A frase nova não traz dado que não está no texto nem na ficha de produção"
+      ]
+    },
+    {
+      "id": 14,
+      "nome": "reescrita-preserva-tom-coloquial",
+      "prompt": "Melhora esse push, mas mantém o nosso jeito de falar.\n\nTítulo: E aí, sumiu? 👀\nCorpo: Bora ver o que chegou de novo, tá incrível!\n\nLoja de tênis. Novidade: 3 modelos novos de corrida chegaram hoje (fonte: cadastro de produtos). CTA: ver lançamentos.",
+      "expected_output": "Reescrita que mantém registro, tratamento e marcas da marca, troca o elogio vazio por dado da fonte e justifica cada alteração.",
+      "assertions": [
+        "O texto reescrito continua coloquial (mantém marcas como 'E aí', 'bora' ou 'tá', ou equivalentes informais) e não passa a registro formal",
+        "Mantém o emoji ou declara o motivo para tirá-lo",
+        "Troca 'tá incrível' por dado da fonte (os 3 modelos de corrida que chegaram hoje)",
+        "Cada alteração aparece com um motivo nomeado, e o que foi preservado do texto recebido está declarado",
+        "Traz a contagem de título e corpo verificada por scripts/validar_limites.py contra o canal push"
+      ]
+    },
+    {
+      "id": 15,
+      "nome": "aprendizado-anterior-sem-perguntar",
+      "prompt": "Registro de aprendizados do cliente:\n\n2026-09-03 · push · carrinho abandonado\nHipótese: remover atrito vence reapresentar produto, porque o leitor é mais consciente.\nResultado: recuperação de 4,1% → 5,3% · desativação de push estável.\nConclusão: o público de carrinho está no estágio mais consciente; interrupção, não dúvida.\nAplicável a: recuperação de checkout, reposição, lembrete de teste expirando.\n\nPedido: escreve o push de recuperação de checkout para Pix gerado e não pago. Promessa: o pedido fica reservado por 30 minutos depois de gerar o Pix (fonte: regra do checkout). Sem desconto. CTA: concluir pagamento.",
+      "expected_output": "A skill usa o aprendizado registrado como premissa, não pergunta de novo pelo resultado anterior nem pelo estágio, e entrega o push completo.",
+      "assertions": [
+        "Não pergunta pelo resultado de peças anteriores nem pelo estágio de consciência do público",
+        "Cita o aprendizado de 2026-09-03 como premissa, herdado pelo campo 'Aplicável a' (recuperação de checkout)",
+        "O diagnóstico declara o estágio mais consciente e marca que veio do aprendizado, não do briefing",
+        "A hipótese parte do aprendizado e testa algo além dele, em vez de repetir o mesmo teste como se fosse novo",
+        "Não usa escassez além do prazo de 30 minutos da fonte"
+      ]
+    },
+    {
+      "id": 16,
+      "nome": "pagina-de-precos-objecoes",
+      "prompt": "Monta a estrutura e a copy da página de preços da Conta Clara (gestão financeira para PME). Planos (fonte: tabela de preços aprovada): Essencial R$ 89/mês, 1 CNPJ; Equipe R$ 189/mês, até 5 CNPJs e conciliação automática; Empresa sob proposta. No anual, 2 meses grátis. Teste de 14 dias sem cartão. Perguntas mais frequentes do SAC: 'meu contador vai conseguir usar?', 'posso cancelar quando quiser?', 'e os meus dados antigos?'.",
+      "expected_output": "Página com as objeções do SAC respondidas em seções ou FAQ, preço e condições claros, um CTA por plano e nenhuma prova inventada.",
+      "assertions": [
+        "Responde às três perguntas do SAC, cada uma em seção ou item de FAQ próprio, e marca como pendente o que depende de informação não fornecida (ex.: importação de dados antigos)",
+        "Se destaca um plano recomendado, o motivo é 'para quem serve', sem afirmar popularidade ('mais escolhido') sem fonte",
+        "O valor anual, se aparece, é coerente com '2 meses grátis' (10 mensalidades: R$ 890 e R$ 1.890) e a renovação ou o cancelamento estão declarados",
+        "Traz um CTA por plano, com 'Falar com vendas' ou equivalente no Empresa",
+        "Não inventa número de clientes, nota de avaliação, logo ou depoimento"
       ]
     }
   ]

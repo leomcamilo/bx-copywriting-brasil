@@ -26,6 +26,19 @@ Consequência prática nas peças que a skill mais escreve:
 - **Anúncio com "o melhor do Brasil"**: superlativo comparativo sem comprovação é enganoso por natureza.
 - **Contador regressivo que reinicia** ao recarregar a página: urgência inexistente, apresentada como real.
 
+### A.1 Preço, parcelamento e venda pela internet
+
+Páginas de preço, PDP e checkout concentram as regras abaixo. A página que esconde condição de pagamento perde a venda e ainda vira passivo.
+
+| Regra | O que significa para a copy |
+|---|---|
+| **Preço claro (art. 31; Lei 10.962/2004 e Decreto 5.903/2006 `[verificar norma vigente]`)** | Preço à vista visível. No parcelado, número de parcelas, valor de cada uma, juros e valor total, todos com o mesmo destaque. "12x de R$ 39" sem o total e sem dizer se há juros não cumpre. |
+| **Crédito e financiamento (art. 52)** | Quando a venda envolve crédito, a peça informa preço à vista, juros, acréscimos, número e periodicidade das prestações e a soma total a pagar. |
+| **"De/por" e desconto** | O preço "de" precisa ser um preço realmente praticado antes. Preço anterior inflado para fabricar desconto é enganoso (art. 37). Percentual de desconto vem da fonte, como qualquer número. |
+| **Arrependimento (art. 49)** | Compra fora do estabelecimento, incluindo internet, pode ser desistida em 7 dias a partir da assinatura ou do recebimento. A copy não pode negar nem dificultar esse direito ("não aceitamos devolução" em loja online). Política de troca mais generosa pode ser anunciada, e vincula (art. 30). |
+| **Comércio eletrônico (Decreto 7.962/2013 `[verificar norma vigente]`)** | A página de venda traz identificação do fornecedor, condições da oferta, forma de pagamento, prazo de entrega e o canal para exercer o arrependimento. A copy pode resumir; a informação completa precisa estar acessível na página. |
+| **Renovação e cancelamento** | Assinatura com renovação automática diz isso antes da compra, junto de como cancelar. Esconder a renovação no rodapé é omissão de dado essencial (art. 37). |
+
 ---
 
 ## B. CONAR
@@ -102,6 +115,7 @@ Rode antes de entregar. Cada item recebe um estado: **aprovado / pendente / bloq
 6. O setor é regulado? Se sim, o claim passou pela regra específica da seção D?
 7. Há comparação com concorrente? Se sim, é objetiva, comprovável e não denigre?
 8. Depoimento usado tem autorização e reflete resultado típico?
+9. Preço e condições estão claros (à vista, parcelado com total e juros, "de" real) e o direito de arrependimento não é negado? Ver A.1.
 
 Qualquer item em **bloqueado** impede a entrega daquele claim. Itens em **pendente** entram na entrega marcados, com a fonte que falta nomeada.
 

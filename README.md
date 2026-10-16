@@ -110,6 +110,8 @@ references/
   pesquisa-voc.md                 # linguagem do cliente: onde buscar e como minerar
   ciclo-de-vida-crm.md            # 14 fluxos com estágio, métrica e erro comum
   canais-e-formatos.md            # limites, estrutura e CTA por canal
+  paginas-completas.md            # homepage, preços, funcionalidade: objeções e prova
+  edicao-e-voz-recebida.md        # edição pontual, reescrita e a voz do texto recebido
   compliance-br.md                # CDC, CONAR, LGPD, setores regulados
   hipotese-e-metrica.md           # métrica primária, guardrail, falsificação
   terminologia-pb.md              # como o mercado brasileiro realmente fala
@@ -125,7 +127,7 @@ scripts/
   cliches.json                    # fonte única dos clichês
   requirements.txt                # vazio por decisão — só biblioteca padrão
 evals/
-  evals.json                      # 12 casos com asserções verificáveis
+  evals.json                      # 16 casos com asserções verificáveis
   README.md                       # como rodar e como interpretar falha
 ```
 

@@ -1,6 +1,6 @@
 # Contrato de saída — template de entregável
 
-Toda entrega da skill segue este formato, na mesma ordem de blocos. Inconsistência de formato é a primeira coisa que o cliente nota, e o formato fixo é o que torna a entrega comparável entre campanhas.
+Toda entrega de **criação** e de **reescrita** segue este formato, na mesma ordem de blocos. **Edição pontual** usa a entrega curta, no fim deste arquivo. Inconsistência de formato é a primeira coisa que o cliente nota, e o formato fixo é o que torna a entrega comparável entre campanhas.
 
 Regras do contrato:
 
@@ -8,6 +8,8 @@ Regras do contrato:
 - Todo item do diagnóstico que foi inferido, e não veio do briefing, é marcado como inferido.
 - Toda variação declara o **eixo de ângulo** que ocupa. Duas variações no mesmo eixo contam como uma.
 - O bloco de conformidade tem exatamente três estados possíveis.
+- Em **reescrita**, cada variação traz também a tabela antes/depois/motivo de `references/edicao-e-voz-recebida.md`, seção D, e uma linha dizendo o que foi preservado do texto recebido.
+- Se a skill reaproveitou contexto (aprendizado anterior, voz da marca, briefing já dado), o bloco de fontes diz qual.
 
 ---
 
@@ -93,3 +95,19 @@ Métrica primária: taxa de recuperação de carrinho · Guardrail: taxa de desa
 | **Bloqueado** | O claim viola regra de setor regulado ou é enganoso por natureza | Não escreve o claim. Explica a regra, cita o dispositivo e oferece a formulação conforme |
 
 Ver `references/compliance-br.md` para o checklist que produz esses estados.
+
+---
+
+## Entrega curta — edição pontual
+
+Só o trecho pedido. Sem variações, diagnóstico nem hipótese, a menos que a pessoa peça.
+
+```markdown
+**[campo ou trecho]:** [texto novo]
+**Antes:** [texto original do trecho]
+**Motivo:** [um motivo da lista de `references/edicao-e-voz-recebida.md`, seção D]
+`Limites: [campo] XX/YY ✅`  ← só se o campo tem limite, sempre por `scripts/validar_limites.py`
+**Conformidade:** [só se o trecho tem claim: aprovado | pendente | bloqueado]
+O restante do texto não foi alterado.
+[Observação fora do escopo, se houver: claim bloqueado, promessa sem fonte ou limite estourado em outro trecho — apontado, não corrigido.]
+```

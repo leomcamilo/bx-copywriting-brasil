@@ -53,6 +53,7 @@ Cada canal tem limite físico, convenção e um CTA que funciona. Escrever igual
 - **Uso**: produto com ticket alto ou decisão complexa.
 - **Estrutura**: headline com promessa forte → dor do leitor → prova/escalada de benefícios → oferta → garantia → CTA.
 - **Extensão**: sem teto fixo, mas cada parágrafo precisa empurrar para a próxima linha. Se o leitor pode parar no meio, a copy falhou.
+- **Página inteira** (homepage, preços, funcionalidade, landing de campanha): mapa de objeções e prova ao longo da página em `references/paginas-completas.md`.
 
 ## Google Ads — RSA (Responsive Search Ads)
 
@@ -77,6 +78,7 @@ Cada canal tem limite físico, convenção e um CTA que funciona. Escrever igual
 - **Um CTA primário.** Botões secundários competem com o principal e derrubam conversão.
 - **Exemplos de CTA**: "Começar o teste grátis", "Quero minha simulação", "Agendar demonstração", "Criar minha conta". Prefira a primeira pessoa quando a ação é do usuário e o compromisso é baixo.
 - **Proibido**: carrossel na primeira dobra; headline institucional em página de conversão; pedir dados antes de entregar qualquer valor.
+- **O resto da página**: `references/paginas-completas.md`.
 
 ## Roteiro de vídeo curto (Reels / Shorts / TikTok)
 
